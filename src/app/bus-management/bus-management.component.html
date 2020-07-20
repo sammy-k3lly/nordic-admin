@@ -1,0 +1,75 @@
+<div class="container-fluid">
+    <!-- OVERVIEW -->
+    <div class="panel panel-headline">
+        <div class="panel-heading">
+            <h3 class="panel-title"> Bus Management </h3>
+            <small> <b> {{busses.length || 0}} Busses </b> </small>
+            <hr>
+        </div>
+        <div class="panel-body row">
+            <div class="bus-card col-md-2" *ngFor="let bus of busses">
+                <span id="close"> <i class="fa fa-close text-danger" aria-hidden="true"></i> </span>
+                <img src="assets/img/bus5.png" alt="">
+                <hr>
+                <h5> {{ bus.carNumber }} </h5>
+                <p> {{ bus.carFrom }} - {{ bus.carTo }} </p>
+                <b class="text-warning text-"> Status: {{ bus.Movement }} </b>
+            </div>
+            
+            <button class="bus-card col-md-2 add-card" data-toggle="modal" data-target="#modelId">
+                <i class="fa fa-plus fa-3x" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Add new Bus</h3>
+
+            </div>
+            <div class="modal-body">
+
+                <form>
+                    <div class="form-group">
+                      <label for="">Bus Number</label>
+                      <input type="text" class="form-control" id="" placeholder="(eg: GA-2020-20)">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Bus Driver Name</label>
+                        <input type="text" class="form-control" id="" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Travel Route (From - To)</label>
+                        <input type="text" class="form-control" id="" placeholder="eg: Koforidua - Abuja">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Trip Type</label>
+                        <select class="form-control" name="" id="">
+                        <option>one-way</option>
+                        <option>round-trip</option>
+                        <option>other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Number of Seats</label>
+                        <input type="number" class="form-control" id="" placeholder="">
+                    </div>                    
+                    <div class="form-group">
+                        <label for="">Price (GHC per Seat)</label>
+                        <input type="number" class="form-control" id="" placeholder="">
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

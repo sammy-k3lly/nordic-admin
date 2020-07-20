@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <!-- OVERVIEW -->
+
+  <form (submit)="signUp(email.value, pass1.value, pass2.value, $event)">
+    <h3> Sign Up </h3>
+    <hr>
+
+    <div class="alert alert-danger alert-dismissible show" role="alert" *ngIf="!!errorMessage">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="clear()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <strong> {{ errorMessage }} </strong> 
+    </div>
+
+    <!-- <div class="form-group">
+      <label for="exampleInputEmail1">Full Name</label>
+      <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Firstname Lastname" #fname>
+    </div> -->
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" #email>
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" placeholder="Password" #pass1>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Confirm Password</label>
+      <input type="password" class="form-control" placeholder="Confirm your Password" #pass2>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    <br>
+    <a href="#" routerLink="/login"> Already with an account? Sign In .. </a>
+  </form>
+
+</div>

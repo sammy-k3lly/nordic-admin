@@ -1,0 +1,11 @@
+form {
+    background: white;
+    padding: 50px;
+    width: 500px;
+    margin: auto;
+    margin-top: 150px;
+}
+
+form > button {
+    margin-top: 20px;
+}

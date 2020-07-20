@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <!-- OVERVIEW -->
+
+  <form (submit)="login(email.value, pass.value, $event)">
+    <h3> Sign In </h3>
+    <hr>
+
+    <div class="alert alert-danger alert-dismissible show" role="alert" *ngIf="!!errorMessage">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="clear()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <strong> {{ errorMessage }} </strong> 
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email Address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="eg: mail@email.com" #email>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="*****" #pass>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1"> &nbsp;
+      <label class="form-check-label" for="exampleCheck1"> Remember me </label>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    <br>
+    <a href="#" routerLink="/sign-up"> Not with an account? Sign up .. </a>
+  </form>
+
+</div>
