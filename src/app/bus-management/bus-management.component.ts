@@ -22,4 +22,22 @@ export class BusManagementComponent implements OnInit {
 
   }
 
+
+  addBus(busName, busType, driverName, travelRoute: string, tripType, numberOfSeats, price, e) {
+    e.preventDefault();
+
+    this.db.collection('@Buses').add({
+      Movement: tripType,
+      Number_Of_Seats: numberOfSeats,
+      Price: price + ' Cedis',
+      Status: null,
+      Time: new Date().toUTCString(),
+      Type: busType,
+      carFrom: travelRoute.split('-')[0].trim(),
+      carNumber: busName,
+      carTo: travelRoute.split('-')[1].trim(),
+      seat: numberOfSeats 
+    })
+  }
+
 }

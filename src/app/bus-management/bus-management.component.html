@@ -34,22 +34,26 @@
             </div>
             <div class="modal-body">
 
-                <form>
+                <form (submit)="addBus(bn.value, bt.value, dn.value, tr.value, tt.value, nos.value, p.value, $event)">
                     <div class="form-group">
                       <label for="">Bus Number</label>
-                      <input type="text" class="form-control" id="" placeholder="(eg: GA-2020-20)">
+                      <input type="text" class="form-control" placeholder="(eg: GA-2020-20)" #bn>
                     </div>
                     <div class="form-group">
                         <label for="">Bus Driver Name</label>
-                        <input type="text" class="form-control" id="" placeholder="">
+                        <input type="text" class="form-control" placeholder="" #dn>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Bus Type</label>
+                        <input type="text" class="form-control" placeholder="" #bt>
                     </div>
                     <div class="form-group">
                         <label for="">Travel Route (From - To)</label>
-                        <input type="text" class="form-control" id="" placeholder="eg: Koforidua - Abuja">
+                        <input type="text" class="form-control" placeholder="eg: Koforidua - Abuja" #tr>
                     </div>
                     <div class="form-group">
                         <label for="">Trip Type</label>
-                        <select class="form-control" name="" id="">
+                        <select class="form-control" name="" #tt>
                         <option>one-way</option>
                         <option>round-trip</option>
                         <option>other</option>
@@ -57,11 +61,11 @@
                     </div>
                     <div class="form-group">
                         <label for="">Number of Seats</label>
-                        <input type="number" class="form-control" id="" placeholder="">
+                        <input type="number" class="form-control" placeholder="" #nos>
                     </div>                    
                     <div class="form-group">
                         <label for="">Price (GHC per Seat)</label>
-                        <input type="number" class="form-control" id="" placeholder="">
+                        <input type="number" class="form-control" placeholder="" #p>
                     </div>
                 </form>
 
