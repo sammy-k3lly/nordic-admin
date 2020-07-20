@@ -1,19 +1,31 @@
 <!-- LEFT SIDEBAR -->
 <div id="sidebar-nav" class="sidebar" *ngIf="loggedInStatus">
-    <div class="sidebar-scroll">
-        <nav>
-            <ul class="nav">
-                <li><a routerLink="/dashboard" routerLinkActive="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-                <li><a routerLink="/users" routerLinkActive="active"><i class="lnr lnr-users"></i> <span> Users </span></a></li>
-                <li><a routerLink="/payment" routerLinkActive="active"><i class="lnr lnr-diamond"></i> <span>Payments</span></a></li>
-                <!-- <li><a routerLink="/reports" routerLinkActive="active"><i class="lnr lnr-chart-bars"></i> <span>Reports</span></a></li> -->
-                <li><a routerLink="/bus-management" routerLinkActive="active"><i class="lnr lnr-bus"></i> <span>Bus Management</span></a></li>
-                <li><a routerLink="/travel" routerLinkActive="active"><i class="lnr lnr-map-marker"></i> <span>Travel History</span></a></li>
-                <!-- <li><a routerLink="/settings" routerLinkActive="active"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li> -->
-                <hr style="opacity: .2;">
-                <li (click)="logout()"><a href="javascript:void(0);;"><i class="lnr lnr-power-switch" style="color: salmon"></i> <span style="color: salmon;">Logout</span></a></li>
-            </ul>
-        </nav>
-    </div>
+  <div class="sidebar-scroll">
+    <nav>
+      <ul class="nav">
+        <li><a routerLink="/dashboard" routerLinkActive="active"><i class="lnr lnr-home"></i>
+            <span>Dashboard</span></a>
+        </li>
+        <li><a routerLink="/users" routerLinkActive="active"><i class="lnr lnr-users"></i> <span> Users
+            </span></a></li>
+        <li><a routerLink="/payment" routerLinkActive="active"><i class="lnr lnr-diamond"></i>
+            <span>Payments</span></a>
+        </li>
+        <!-- <li><a routerLink="/reports" routerLinkActive="active"><i class="lnr lnr-chart-bars"></i> <span>Reports</span></a></li> -->
+        <li><a routerLink="/bus-management" routerLinkActive="active"><i class="lnr lnr-bus"></i> <span>Bus
+              Management</span></a></li>
+        <li><a routerLink="/travel" routerLinkActive="active"><i class="lnr lnr-map-marker"></i> <span>Travel
+              History</span></a></li>
+        <!-- <li><a routerLink="/settings" routerLinkActive="active"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li> -->
+        
+        <li (click)="logout()" class="fixed-bottom">
+            <a href="javascript:void(0);">
+                <i class="lnr lnr-power-switch" style="color: salmon"></i>
+            <span style="color: salmon;">Logout</span>
+            </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </div>
 <!-- END LEFT SIDEBAR -->
